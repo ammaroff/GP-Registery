@@ -13,6 +13,7 @@ namespace GP_Registery.DAL
         public RegisteryDBContext()
             :base("RegisteryDBContext")
         {
+            Console.WriteLine(this.Database.Connection.ConnectionString);
 
         }
         public DbSet<Domain> Domains { get; set; }
