@@ -48,6 +48,7 @@
             @foreach (var domain in Model.Domains)
             {
                 @Html.ActionLink(domain.DomainName,"details","Domains",new {id=domain.ID},null)
+                <br/>
             }
            
         </dd>
