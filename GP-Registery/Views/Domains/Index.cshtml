@@ -13,17 +13,18 @@
     <tr>
        
         <th>
-            @Html.DisplayNameFor(model => model.DomainName)
+           Domain
         </th>
         <th>
             Owner
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ExpirationDate)
+            Creation Date
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreationDate)
+           Expiration Date
         </th>
+       
         <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
@@ -37,13 +38,14 @@
             @Html.DisplayFor(modelItem => item.DomainName)
         </td>
         <td>
-            @Html.ActionLink(item.Contact.Name,"Details","Contact")
+            @Html.ActionLink(item.Contact.Name, "Details", "Contact", new { id = item.ContactID }, null)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ExpirationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreationDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Status)

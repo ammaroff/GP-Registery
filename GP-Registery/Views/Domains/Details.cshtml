@@ -24,7 +24,7 @@
         </dt>
 
         <dd>
-            @Html.ActionLink(Model.Contact.Name, "Details", "Contact")
+            @Html.ActionLink(Model.Contact.Name, "Details", "Contact", new { id = Model.ContactID } ,null)
         </dd>
 
         <dt>
