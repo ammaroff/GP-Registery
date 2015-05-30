@@ -10,13 +10,7 @@
     <h4>Domain</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Contact.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Contact.Name)
-        </dd>
+       
 
         <dt>
             @Html.DisplayNameFor(model => model.DomainName)
@@ -24,6 +18,13 @@
 
         <dd>
             @Html.DisplayFor(model => model.DomainName)
+        </dd>
+        <dt>
+            Owner
+        </dt>
+
+        <dd>
+            @Html.ActionLink(Model.Contact.Name, "Details", "Contact")
         </dd>
 
         <dt>
