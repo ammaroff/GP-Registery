@@ -41,9 +41,15 @@
         <dd>
             @Html.DisplayFor(model => model.ContactType)
         </dd>
-
         <dd>
-            @Html.DisplayFor(model => model.Domains)
+            Has domains
+        </dd>
+        <dd>
+            @foreach (var domain in Model.Domains)
+            {
+                @Html.ActionLink(domain.DomainName,"details","Domains",new {id=domain.ID},null)
+            }
+           
         </dd>
 
     </dl>
