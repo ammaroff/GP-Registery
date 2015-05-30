@@ -11,7 +11,7 @@ namespace GP_Registery.DAL
     public class RegisteryDBContext :DbContext
     {
         public RegisteryDBContext()
-            :base("RegisteryDBContext")
+            : base("SQLSERVER_CONNECTION_STRING")
         {
             Console.WriteLine(this.Database.Connection.ConnectionString);
 
